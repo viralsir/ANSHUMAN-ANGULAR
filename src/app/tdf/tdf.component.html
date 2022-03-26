@@ -1,0 +1,15 @@
+<form  #CalcFormRef="ngForm" (ngSubmit)="calculateAns(CalcFormRef)">
+  No1: <input type="number" ngModel name="n1"> <br/>
+  No2: <input type="number" ngModel name="n2"> <br/>
+  Symbol : <select name="symbol" ngModel>
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select> <br/>
+  <input type="submit" value="Answer">
+  <input type="reset" value="clear">
+
+</form>
+<br/>
+<h1>{{answer}}</h1>
