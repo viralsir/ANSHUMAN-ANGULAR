@@ -11,6 +11,7 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TdfComponent } from './tdf/tdf.component';
 import { MdfComponent } from './mdf/mdf.component';
+import { MdfAnshumanComponent } from './mdf-anshuman/mdf-anshuman.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MdfComponent } from './mdf/mdf.component';
     AnshumanComponent,
     TwoWayComponent,
     TdfComponent,
-    MdfComponent
+    MdfComponent,
+    MdfAnshumanComponent
   ],
   imports: [
     BrowserModule,ReactiveFormsModule,FormsModule
