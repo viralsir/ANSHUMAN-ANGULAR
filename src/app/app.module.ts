@@ -10,6 +10,7 @@ import { AnshumanComponent } from './anshuman/anshuman.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TdfComponent } from './tdf/tdf.component';
+import { MdfComponent } from './mdf/mdf.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TdfComponent } from './tdf/tdf.component';
     EventBindingComponent,
     AnshumanComponent,
     TwoWayComponent,
-    TdfComponent
+    TdfComponent,
+    MdfComponent
   ],
   imports: [
     BrowserModule,ReactiveFormsModule,FormsModule

@@ -1,0 +1,16 @@
+<p>mdf works!</p>
+<form [formGroup]="loginformRef" (ngSubmit)="loginbtnclick()">
+   User Name : <input type="text" formControlName="user"> <br/>
+   <ul>
+     <li>Username must not be empty</li>
+     <li>Username must be 3 character long</li>
+   </ul>
+   Password : <input type="password" formControlName="password"> <br/>
+  <input type="submit" value="login" [disabled]="loginformRef.invalid">
+  <input type="reset" value="Clear">
+</form>
+
+<hr/>
+<h1>{{msg}}</h1>
+<h1>form valid :{{loginformRef.valid}}</h1>
+<H1>form invalid : {{loginformRef.invalid}}</H1>

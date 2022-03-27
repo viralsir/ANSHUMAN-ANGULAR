@@ -1,5 +1,5 @@
 <form  #CalcFormRef="ngForm" (ngSubmit)="calculateAns(CalcFormRef)">
-  No1: <input type="number" ngModel name="n1"> <br/>
+  No1: <input type="number" ngModel name="n1" required minlength="3"> <br/>
   No2: <input type="number" ngModel name="n2"> <br/>
   Symbol : <select name="symbol" ngModel>
               <option value="+">+</option>
@@ -13,3 +13,5 @@
 </form>
 <br/>
 <h1>{{answer}}</h1>
+<h1>form valid : {{CalcFormRef.valid}}</h1>
+<h1>form invalid : {{CalcFormRef.invalid}}</h1>
