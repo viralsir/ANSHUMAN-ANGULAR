@@ -1,0 +1,59 @@
+<!--<p>structure-directive works!</p>
+<h1 *ngIf="5>2">Hello welcome anshuman</h1>
+<h1 *ngIf="displayhead"> Hello welcome anshuman </h1>
+<ul>
+   <li *ngFor="let ele of names">{{ele}}</li>
+</ul>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Anshuman Product Mart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" (click)="entrybtnclick()" aria-current="page" href="#">Entry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="viewbtnclick()" href="#">View</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--<input type="button" value="Entry" (click)="entrybtnclick()"> | <input type="button" value="View" (click)="viewbtnclick()">-->
+<br/>
+<br/>
+
+<div class="row">
+
+  <div class="col-3"></div>
+  <div class="col-6">
+          <form *ngIf="displayform" [formGroup]="productformref" (ngSubmit)="addproduct()">
+        Id : <input type="number" class="form-control" formControlName="id"> <br/>
+        Name : <input type="text" class="form-control" formControlName="name"> <br/>
+        Qty : <input type="number" class="form-control" formControlName="qty"> <br/>
+        <input type="submit" class="btn btn-outline-primary"  value="Add" [disabled]="productformref.invalid">
+        <input type="reset"  class="btn btn-outline-primary" value="Clear">
+      </form>
+      <h1>{{msg}}</h1>
+
+      <table class="table table-success table-striped" *ngIf="displaytable">
+        <tr><th>Id</th><th>Name</th><th>Qty</th></tr>
+        <tr *ngFor="let product of productlist">
+           <td>{{product.id}}</td>
+           <td>{{product.name}}</td>
+            <td>{{product.qty}}</td>
+        </tr>
+      </table>
+
+  </div>
+  <div class="col-3"></div>
+</div>
+

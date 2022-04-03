@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TdfComponent } from './tdf/tdf.component';
 import { MdfComponent } from './mdf/mdf.component';
 import { MdfAnshumanComponent } from './mdf-anshuman/mdf-anshuman.component';
+import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MdfAnshumanComponent } from './mdf-anshuman/mdf-anshuman.component';
     TwoWayComponent,
     TdfComponent,
     MdfComponent,
-    MdfAnshumanComponent
+    MdfAnshumanComponent,
+    StructureDirectiveComponent
   ],
   imports: [
     BrowserModule,ReactiveFormsModule,FormsModule
